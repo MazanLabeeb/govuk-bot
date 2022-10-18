@@ -2,6 +2,7 @@ const puppeteer = require("puppeteer");
 const path = require('path');
 const { sleep } = require("./utils/sleep.utils");
 const downloadLocation = path.join(__dirname, "public");
+require('dotenv').config();
 
 
 
@@ -23,7 +24,7 @@ module.exports.download = (code = "", date = "", company = "") => new Promise(as
 
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: process.env.NODE_ENV === 'development'? false: true,
   });
   const page = await browser.newPage();
 
