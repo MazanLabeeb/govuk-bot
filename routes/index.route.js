@@ -1,8 +1,6 @@
 const express = require("express");
-const app = express();
 const router = express.Router();
 const scrap = require("./../scrap");
-const path = require("path");
 
 
 
