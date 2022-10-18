@@ -57,8 +57,10 @@ const dobValidator = dob => {
   return true;
 }
 
-app.get("/api", (req, res) => {
-  res.sendFile(path.join(__dirname, './view/api.html'));
+app.get("/api", (req, res, next) => {
+  let error = new Error("Page is under Construction");
+  error.statusCode = 404;
+  next(error);
 })
 
 app.route("/api/:id")
