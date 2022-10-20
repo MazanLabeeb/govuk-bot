@@ -1,3 +1,0 @@
-remove <br> from custom message
-index.hbs fix errr msg console
-clsoe browser on success

@@ -155,7 +155,7 @@ module.exports.download = (code = "", date = "", company = "") => new Promise(as
   }
 
   console.log("> " + "Downloading file...");
-  await sleep(5000);
+  await sleep(process.env.WAIT_FOR_DOWNLOAD || 3000);
   console.log("> " + "File Downloaded.");
   let message = "File downlaoded"
   resolve({message})

@@ -79,7 +79,6 @@
 <body>
     <nav>
         <a href="/">Home</a>
-        <a style="margin-left: 25px ;" href="/logout">Logout</a>
     </nav>
 
     <div class="api bg-slate-800  ring-1 ring-slate-700/5 shadow-md ">
@@ -87,13 +86,13 @@
         <h1>API USAGE</h1>
         <br>
         <h2 class="code"><span class="get">GET</span><span
-                class="url">http://localhost:8080/api/CODE?dob=DD-MM-YYYY</span></h2>
+                class="url">http://localhost:8080/api/CODE?dob=DD-MM-YYYY&company=company_name_here</span></h2>
         <br>
         <br>
         <h1>Example</h1>
         <br>
         <h2 class="code"><span class="get">GET</span><span
-                class="url">http://localhost:8080/api/01C0509E?dob=23-04-1979</span></h2>
+                class="url">http://localhost:8080/api/WJ6AWKZGY?dob=03-03-1988&company=Nightingale%20Pass</span></h2>
         <br><br>
 
         <h1>Response </h1>
@@ -102,56 +101,8 @@
                 class="url" style="border-left: none;border-color: green;">Returns PDF File.</span></h2>
         <br><br>
 
-        <h1>Errors:</h1>
-        <br>
-        <div class="textarea">
-            <textarea name="" id="" cols="150" rows="7" disabled>{
-    "error": {
-        "code": 1,
-        "message": "Date of Birth was not provided in the Request. Made a GET Request with proper Params and Query. e.g., GET:api/01C0509E?dob=23-04-1979"
-    }
-}</textarea>
-        </div>
-        <br>
-        <div class="textarea">
-<textarea name="" id="" cols="150" rows="7" disabled >{
-    "error": {
-        "code": 2,
-        "message": "dob format is not validated. Proper Format : (DD-MM-YYYY) e.g., GET:api/01C0509E?dob=23-04-1979"
-    }
-}</textarea>
-        </div>
-
-        <br>
-        <div class="textarea">
-<textarea name="" id="" cols="150" rows="6" disabled >{
-    "error": {
-        "code": 3,
-        "message": "Either Code or DOB is not validated."
-    }
-}</textarea>
-        </div>
-
-        <br>
-        <div class="textarea">
-<textarea name="" id="" cols="150" rows="6" disabled >{
-    "error": {
-        "code": 4,
-        "message": "Either Code or DOB is not validated."
-    }
-}</textarea>
-
-        <br>
-        <br>
-        <div class="textarea">
-<textarea name="" id="" cols="150" rows="6" disabled >{
-    "error": {
-        "code": 5,
-        "message": error
-    }
-}</textarea>
-        </div>
-
+        <h1>Errors</h1>
+        <p style="text-align: center;">Returns json with Error</p>
 
     </div>
 </body>

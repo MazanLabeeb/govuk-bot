@@ -3,6 +3,9 @@ const router = express.Router();
 const scrap = require("./../scrap");
 
 
+// @  ACCESS: PUBLIC
+// @  METHOD: GET AND POST
+// @ index page UI
 
 
 const indexRouter = router
